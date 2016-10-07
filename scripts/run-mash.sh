@@ -36,6 +36,7 @@ function HELP() {
   echo "Options"
   echo " -a ALIAS_FILE (none)"
   echo " -e EUC_DIST_PERCENT ($EUC_DIST_PERCENT)"
+  echo " -n NUM_GBME_SCANS ($NUM_GBME_SCANS)"
   echo " -o OUT_DIR ($OUT_DIR)"
   echo " -l FILES_LIST (none)"
   echo " -m METADATA_FILE (none)"
@@ -59,7 +60,7 @@ echo "Invocation: $0 $@"
 #
 # Get args
 #
-while getopts :a:e:i:l:m:o:s:h OPT; do
+while getopts :a:e:i:l:m:n:o:s:h OPT; do
   case $OPT in
     a)
       ALIAS_FILE="$OPTARG"
